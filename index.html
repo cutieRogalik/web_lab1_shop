@@ -58,11 +58,34 @@
 
             <p>Итого: 0 р.</p>
 
-            <button>Оформить заказ</button>
+            <button class="do-checkout">Оформить заказ</button>
         </section>
     </main>
     <footer>
         <p>Femto. 2026-2093</p>
     </footer>
+    <div class="modal" id="order-modal">
+        <div class="modal-content">
+            <button class="modal-close" type="button">&times;</button>
+
+            <h2>Оформление заказа</h2>
+
+            <form class="order-form">
+                <label for="first-name">Имя</label>
+                <input type="text" id="first-name" name="first-name" required>
+
+                <label for="last-name">Фамилия</label>
+                <input type="text" id="last-name" name="last-name" required>
+
+                <label for="address">Адрес доставки</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="phone">Контактный телефон</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <button type="submit">Создать заказ</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
