@@ -220,3 +220,10 @@ footer {
 .order-form button:hover {
     background-color: #444;
 }
+
+.cart-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+}
