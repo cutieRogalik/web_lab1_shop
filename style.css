@@ -222,8 +222,41 @@ footer {
 }
 
 .cart-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: #f8f8f8;
+}
+
+.cart-item span:first-child {
+    flex: 1;
+}
+
+.cart-item button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-item button:hover {
+    background-color: #444;
+}
+
+.cart-total {
+    font-size: 18px;
+    font-weight: bold;
 }

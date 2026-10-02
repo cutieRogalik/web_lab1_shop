@@ -79,7 +79,7 @@ function renderCart() {
         cartItems.appendChild(item);
         
     });
-    cartTotal.textContent = 'Итого: ' + total + 'p.';
+    cartTotal.textContent = 'Итого: ' + total + ' p.';
 }
 
 
