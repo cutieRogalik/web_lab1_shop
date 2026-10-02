@@ -62,10 +62,15 @@ function renderCart() {
         const increaseButton = document.createElement('button');
         increaseButton.textContent = '+';
 
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Убрать'
+
         item.appendChild(productInfo);
         item.appendChild(decreaseButton);
         item.appendChild(quantity);
         item.appendChild(increaseButton);
+        item.appendChild(deleteButton);
+
         increaseButton.addEventListener('click', function () {
             product.quantity++;
             saveCart();
@@ -78,6 +83,13 @@ function renderCart() {
                 const productIndex = cart.indexOf(product);
                 cart.splice(productIndex, 1);
             }
+            saveCart();
+            renderCart();
+        });
+        deleteButton.addEventListener('click', function () {
+            const productIndex = cart.indexOf(product);
+            cart.splice(productIndex, 1);
+
             saveCart();
             renderCart();
         });

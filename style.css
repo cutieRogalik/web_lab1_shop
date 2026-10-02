@@ -79,7 +79,7 @@ section:first-child h2 {
 }
 
 section:nth-child(2) {
-    width: 300px;
+    width: 380px;
 
     display: flex;
     flex-direction: column;
@@ -259,4 +259,10 @@ footer {
 .cart-total {
     font-size: 18px;
     font-weight: bold;
+}
+
+.cart-item button:last-child {
+    width: auto;
+    padding: 0 10px;
+    font-size: 14px;
 }
