@@ -37,8 +37,10 @@ function renderCart() {
         cartTotal.textContent = 'Итого: 0 р.';
         return;
     }
+    let total=0;
 
     cart.forEach(function (product) {
+        total += product.price * product.quantity
         const item = document.createElement('div');
         
         item.classList.add('cart-item');
@@ -77,6 +79,7 @@ function renderCart() {
         cartItems.appendChild(item);
         
     });
+    cartTotal.textContent = 'Итого: ' + total + 'p.';
 }
 
 
