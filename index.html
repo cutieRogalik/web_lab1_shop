@@ -67,9 +67,11 @@
     </footer>
     <div class="modal" id="order-modal">
         <div class="modal-content">
-            <button class="modal-close" type="button">&times;</button>
 
-            <h2>Оформление заказа</h2>
+            <div class="order-header">
+                <button class="modal-close" type="button">&times;</button>
+                <h2>Оформление заказа</h2>
+            </div>
 
             <form class="order-form">
                 <label for="first-name">Имя</label>
@@ -86,6 +88,11 @@
 
                 <button type="submit">Создать заказ</button>
             </form>
+            <div class="order-success">
+                <h2>Заказ создан!</h2>
+                <p>Спасибо за покупку. Ваш заказ успешно оформлен.</p>
+                <button type="button" class="success-close">Закрыть</button>
+            </div>
         </div>
     </div>
     <script  src="script.js"></script>

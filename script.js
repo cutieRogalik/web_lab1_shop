@@ -3,6 +3,7 @@ const cart = saveCart ? JSON.parse(savedCart) : [];
 const addToCartButtons = document.querySelectorAll('.add-to-cart');
 const cartItems = document.querySelector('.cart-items');
 const cartTotal = document.querySelector('.cart-total');
+const orderHeader = document.querySelector('.order-header');
 
 function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -113,4 +114,29 @@ closeButton.addEventListener('click', function(){
     modal.style.display = 'none';
 });
 
+const orderForm = document.querySelector('.order-form');
+const orderSuccess = document.querySelector('.order-success');
+const successClose = document.querySelector('.success-close');
+
+orderForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    cart.length = 0;
+    saveCart();
+    renderCart();
+
+    orderForm.style.display = 'none';
+    orderHeader.classList.add('hidden');
+    orderSuccess.style.display = 'block';
+});
+
+successClose.addEventListener('click', function() {
+    modal.style.display = 'none';
+
+    orderForm.style.display = 'flex';
+    orderHeader.classList.remove('hidden');
+    orderSuccess.style.display = 'none';
+});
+
 renderCart();
+
