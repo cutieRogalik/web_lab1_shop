@@ -1,5 +1,15 @@
 const savedCart = localStorage.getItem('cart');
-const cart = saveCart ? JSON.parse(savedCart) : [];
+
+let cart = [];
+
+if (savedCart) {
+    const parsedCart = JSON.parse(savedCart);
+
+    if (Array.isArray(parsedCart)) {
+        cart = parsedCart;
+    }
+}
+
 const addToCartButtons = document.querySelectorAll('.add-to-cart');
 const cartItems = document.querySelector('.cart-items');
 const cartTotal = document.querySelector('.cart-total');
